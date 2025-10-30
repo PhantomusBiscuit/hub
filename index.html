@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hub &ndash; PhantomusBiscuit's hub</title>
+  <link rel="stylesheet" href="uicons-regular-rounded.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,700,bi,i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cascadia+Code:400,i&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon"       href="favicon.png" type="image/png">
+  <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    .noscript {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center; padding: 8px;
+      background: hsl(from var(--bg-dark) h s l / 0.5); z-index: 1000000; text-align: center;
+      backdrop-filter: blur(16px); font-size: 2rem;
+      pointer-events: all;
+    }
+  </style>
+</head>
+<body>
+  <noscript class="noscript">You need Javascript to go to this site.</noscript>
+  <header class="bg">
+    <img src="favicon.png" alt="" class="hover" onclick="location.href=location.origin+location.pathname">
+    <h2 class="hover" onclick="location.href=location.origin+location.pathname">The Hub</h2>
+    <div class="input" onclick="$$$('header-search').focus()">
+      <i class="fi fi-rr-search"></i>
+      <input
+        type="search"
+        placeholder="Search projects&#x2026;"
+        id="header-search"
+        class="no-bg"
+      />
+      <div class="combination">
+        <kbd>Ctrl</kbd><kbd>K</kbd>
+      </div>
+    </div>
+    <button class="button" onclick="toggleMode()">
+      <i class="fi fi-rr-moon"></i>
+      <div class="combination">
+        <kbd>Ctrl</kbd><kbd>G</kbd>
+      </div>
+    </button>
+    <button class="button">
+      <i class="fi fi-rr-settings"></i>
+      <div class="combination">
+        <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>I</kbd>
+      </div>
+    </button>
+  </header>
+  <main>
+    <h2>
+      <i class="fi fi-rr-home"></i>All projects
+    </h2>
+    <div class="projects">
+    </div>
+  </main>
+</body>
+<div class="command input hidden" onclick="$$$('cmd').focus()">
+  <i class="fi fi-rr-command"></i>
+  <input type="text" class="bg-dark" id="cmd" placeholder="Type a command&#x2026;">
+  <div class="combination">
+    <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Z</kbd>
+  </div>
+</div>
+</html>

@@ -1,0 +1,40 @@
+{
+  "file_explorer": {
+    "title": "File Explorer",
+    "desc": "- A custom-built web-based file explorer inspired by Windows Explorer.\n- It can list and organize drives like `A:`, `C:`, and `F:`, sort them alphabetically, and display folder contents dynamically.\n- The browser version mimics the layout and functionality of a real file explorer, while the `Node.js` backend version can access and fetch actual directories and files.\n- The project includes sorting, path navigation, and file info display — designed to look and feel like a native Windows 11 file manager!",
+    "tags": ["html", "css", "js", "file", "explorer", "disk", "installation", "node", "drive", "storage", "info", "usb"],
+    "featured": false,
+    "info": {
+      "cdate": 1760025402000,
+      "mdate": 1761308280000,
+      "status": -1
+    }
+  },
+  "quick_notes": {
+    "title": "Quick Notes",
+    "desc": "## Definition\n- **Quick Notes** is a lightweight and fast note-taking web app that supports Markdown-like syntax (e.g. `**bold**`, `*italic*`, `---` for dividers) and automatically renders it into styled HTML while keeping entity encoding safe.\n- It's built with HTML, CSS, and JavaScript, focusing on simplicity, speed, and offline functionality. Notes are displayed in a clean interface with responsive design and subtle animations.\n- Each note is stored locally, can include formatting, and the app ensures that raw content remains secure by sanitizing user input before rendering.\n## Key features\n- Markdown-like syntax rendering (`**bold**`, `*italic*`, `# Heading`, etc.).\n- Safe HTML entity encoding (prevents injection).\n- Offline, client-side data handling with `localStorage`.\n- Smooth, minimal UI with focus on readability.\n- Responsive layout and theme-friendly design.",
+    "tags": ["notes", "markdown", "html", "js", "css", "text", "editor", "offline", "storage", "local", "minimal", "utility", "productivity"],
+    "featured": true,
+    "info": {
+      "cdate": 1758648282000,
+      "mdate": 1759431840000,
+      "status": 2
+    }
+  },
+  "weather_app": {
+    "title": "Weather App",
+    "desc": "## Definition\r\nThis app is a beautifully designed weather app that provides accurate, real-time weather information for any location worldwide.\nWith a sleek interface and smooth animations, you can instantly view the current temperature, humidity, wind speed, and more — all powered by reliable weather data sources.\n\n## Features\n\n- Real-time temperature and condition updates\n- Hourly and daily forecasts\n- Interactive charts for temperature trends\n- Auto-detection of user location\n- Fast and responsive design",
+    "tags": ["weather", "forecast", "climate", "temperature", "humidity", "wind", "rain", "sunny", "cloudy", "storm", "real-time", "live-data"],
+    "featured": false,
+    "info": {
+      "cdate": 1758048234000,
+      "mdate": 1754832840000,
+      "status": 2
+    }
+  },
+  "_meta": {
+    "mode": 1,
+    "settings.showCombinations": true,
+    "settings.accentColor": 270
+  }
+}
