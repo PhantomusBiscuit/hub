@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" class="light-mode">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Notes</title>
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,700,bi,i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon"       href="favicon.svg" type="image/svg+xml">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="stats-parent" style="display: none;">
+    <div class="stats">
+      <h2 style="margin: 4px;">Stats for note ----</h2>
+      <div>
+        <span class="title">Title</span>
+        <span class="value">-----</span>
+      </div>
+      <div>
+        <span class="title">ID</span>
+        <span class="value">---------</span>
+      </div>
+      <div>
+        <span class="title">Created</span>
+        <span class="value">DD - MM - YYYY HH:MM:SS</span>
+      </div>
+      <div>
+        <span class="title">Last modified</span>
+        <span class="value">DD - MM - YYYY HH:MM:SS</span>
+      </div>
+      <div>
+        <span class="title">Characters (with spaces)</span>
+        <span class="value">---</span>
+      </div>
+      <div>
+        <span class="title">Characters (without spaces)</span>
+        <span class="value">---</span>
+      </div>
+      <div>
+        <span class="title">Words</span>
+        <span class="value">---</span>
+      </div>
+      <div>
+        <span class="title">Sentences</span>
+        <span class="value">---</span>
+      </div>
+      <div>
+        <span class="title">Paragraphs</span>
+        <span class="value">---</span>
+      </div>
+      <div>
+        <span class="title">Lines</span>
+        <span class="value">---</span>
+      </div>
+      <div>
+        <span class="title">Estimated reading time (150 wpm)</span>
+        <span class="value">--:--:--</span>
+      </div>
+
+      <div class="buttons">
+        <button id="stats-copy">Copy</button>
+        <button id="stats-ok">OK</button>
+      </div>
+    </div>
+  </div>
+  <palette style="display: none;">
+    <span class="color c1">back</span>
+    <span class="color c2">text</span>
+    <span class="color c3">card-back</span>
+    <span class="color c4">scroll</span>
+    <span class="color c5">thumb</span>
+    <span class="color c6">button</span>
+  </palette>
+  <header>
+    <h1>Quick Notes (0)</h1>
+    <button id="addNote">
+      <i class="fi fi-rr-plus"></i>
+    </button>
+    <br>
+    <button id="search">
+      <i class="fi fi-rr-search"></i>
+    </button>
+
+    <button id="addDebugNote" hidden onclick="
+    for (let i=0;i<10;i++)
+      {
+        let xy = '';
+        for (let j=0;j<4096;j++) {xy = String(xy) + String(Math.floor(Math.random()*16))+' '}
+        addNote('Debug title', `${String(xy)}`);
+      }
+    ">
+      <i class="fi fi-rr-bug"></i>
+    </button>
+
+    <button id="toggleMode">
+      <i class="fi fi-rr-moon"></i>
+    </button>
+
+    <button id="refresh" onclick="window.location.reload()">
+      <i class="fi fi-rr-refresh"></i>
+    </button>
+
+    <button id="delete">
+      <i class="fi fi-rr-trash"></i>
+    </button>
+
+  </header>
+  <main>
+  </main>
+
+  <dialog id="titleDialog">
+    <form method="dialog">
+      <h2 style="margin: 4px;"><i class="fi fi-rr-note-sticky"></i> New note</h2>
+      <div class="field">
+        <label for="inputIndex">Title</label>
+        <input type="text" id="inputIndex" placeholder="Insert title here">
+      </div>
+      <div class="field">
+        <label for="inputIndex2">Notes</label>
+        <textarea id="inputIndex2" placeholder="Lorem ipsum dolor sit amet&#x2026;"></textarea>
+      </div>
+      <menu>
+        <button type="button" id="cancelButton" value="cancel">Cancel</button>
+        <button type="submit" id="confirmButton" value="default">OK</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <dialog id="confirm">
+    <form method="dialog">
+      <div class="field">
+        <label>Are you sure? This action <b>CANNOT</b> be undone.</label>
+      </div>
+      <menu>
+         <button type="button" id="cancelButton1" value="cancel">No</button>
+         <button type="button" id="confirmButton1" value="default" class="b0">Yes</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <dialog id="searchDialog">
+    <form method="dialog">
+      <div class="field">
+        <label>Search&#x2026;</label>
+        <input type="text" id="searchInput">
+      </div>
+      <menu>
+        <button type="button" id="confirmButton2" value="default" class="b1">OK</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <dialog id="stats">
+    <form method="dialog">
+      <div class="field">
+        <label><i class="fi fi-rr-info"></i> Statistics</label>
+      </div>
+      <div class="field" style="display: flex;">
+        <div>
+          <span class="noteId">ID:</span>
+          <span class="noteId-value">---------</span>
+        </div>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="saving">
+    <form method="dialog">
+      <div class="field">
+        <label><i class="fi fi-rr-disk"></i> Do you want to save changes to &laquo; ??? &raquo;</label>
+      </div>
+      <div class="field" style="display: flex;">
+        <button id="saving1">
+          <i class="fi fi-rr-disk"></i>
+          Save changes
+        </button>
+        <button id="saving2">
+          <i class="fi fi-rr-floppy-disk-circle-xmark"></i>
+          Discard changes
+        </button>
+        <button id="saving3">
+          <i class="fi fi-rr-cross-circle"></i>
+          Cancel
+        </button>
+      </div>
+    </form>
+  </dialog>
+
+  <loading>
+    <span>Loading&hellip;</span>
+    <div class="spinner">
+      <div class="spinner-div"></div>
+      <div class="spinner-div"></div>
+      <div class="spinner-div"></div>
+      <div class="spinner-div"></div>
+      <div class="spinner-div"></div>
+      <div class="spinner-div"></div>
+    </div>
+  </loading>
+
+  <div class="no-notes">
+    <img src="favicon.svg" alt="🗒️❓">
+    <p>
+      There are no notes.
+    </p>
+    <div>
+      <span>Tap the</span>
+      <i class="ico fi fi-rr-add"></i>
+      <span>to add a note</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span style="text-align: center; font-weight: 700;">v150</span>
+    <hr style="width: 1px; margin: 0; opacity: 0.5;">
+    <span style="flex: 1;">Title here</span>
+    <hr style="width: 1px; margin: 0; opacity: 0.5;">
+    <span style="max-width: 200px; text-align: right;">DD-MM-YYYY HH:MM:SS</span>
+  </div>
+</body>
+</html>
