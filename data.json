@@ -32,9 +32,21 @@
       "status": 2
     }
   },
+  "file_explorer_2": {
+    "title": "File Explorer Advanced",
+    "desc": "\nThis app is a high-performance, browser-driven file operations console that delivers a native-grade Explorer experience directly through the web stack. This solution bridges modern UI capabilities with OS-level file system access to streamline navigation, insights, and asset management.\n\n---\n\n## **🔍 Overview**\n\nFile Explorer functions as a lightweight, full-featured system navigator powered by an Express.js backend. It provides a robust interface for browsing local directories, analyzing file metadata, and interacting with the underlying operating system — all from a responsive, keyboard-friendly UI.\n\nThis platform enables rapid inspection, navigation, and previewing of files without requiring traditional desktop clients, optimizing developer workflows, support diagnostics, and power-user operations.\n\n---\n\n## **✨ Key Features**\n\n### **Front-End Experience**\n\n* **Responsive File Grid & Tree Navigation**\n  Intuitive directory traversal with breadcrumb support and dynamic content rendering.\n\n* **Keyboard-Optimized Workflow**\n  Full shortcut coverage, arrow-key navigation, focus management, and contextual triggers.\n\n* **Context Menu System**\n  Right-click actions aligned with cursor coordinates, enabling file-level operations.\n\n* **Smart Rendering Pipeline**\n\n  * Image previews\n  * Audio album art extraction\n  * MIME-aware glyph representations\n\n---\n\n### **Back-End System Integration**\n\n* **Directory Enumeration**\n  High-fidelity listings with name, size, timestamps, type classification, and file attributes.\n\n* **Metadata Extraction**\n\n  * `music-metadata` for embedded album art and audio tags\n  * OS-level icon extraction for Windows executables\n  * MIME lookup based on extension and header analysis\n\n* **System Insight Capabilities**\n\n  * Partition discovery\n  * External/MTP device identification\n  * User profile (HOME / USERPROFILE) resolution\n\n* **Robust Asset Delivery**\n  Streams binary data (images, icons, thumbnails) via dedicated API endpoints.\n\n---\n\n## **🖥️ Front-End Architecture**\n\n* **HTML5** interface with componentized structure\n* **CSS variables** and isolated theming primitives\n\n---\n\n## **🔌 Tech Stack**\n\n| Layer          | Technology                                       |\n| -------------- | ------------------------------------------------ |\n| Front-End      | HTML, CSS, JavaScript                            |\n| Back-End       | Node.js, Express                                 |\n| Metadata       | music-metadata, OS icon extractors               |\n| OS Integration | fs, path, environment variables, child processes |\n| Media Ops      | Base64, Buffers, binary streaming                |\n\n---\n\n## **🚀 Getting Started**\n\n### **1. Install Dependencies**\n\n```sh\nnpm install\n```\n\n### **2. Launch the Backend**\n\n```sh\nnode server.js\n```\n\n### **3. Access the Interface**\n\nNavigate to:\n\n```\nhttp://localhost:3000\n```\n\n---\n\n## **🔒 Security Considerations**\n\n* Path traversal is mitigated through sanitization and normalization.\n* Direct filesystem access is restricted to allowed roots.\n* No write/delete operations are exposed publicly by default.\n\n---\n\n## **🛠️ Roadmap**\n\n* File copy/move/delete operations\n* Zip extraction and packing\n* Multi-select support\n* Thumbnail caching layer\n* Drag-and-drop operations",
+    "tags": ["file-explorer", "filesystem", "directory-browser", "file-manager", "file-navigation", "folder-viewer", "file-operations", "path-resolution", "metadata-extraction", "html", "css", "javascript", "web-ui", "ui-components", "dialog-api", "context-menu", "responsive-interface", "keyboard-navigation", "nodejs", "express", "api-endpoints", "backend-services", "fs-module", "io-streaming", "mime-detection"],
+    "featured": false,
+    "info": {
+      "cdate": 1757595240000,
+      "mdate": 1763906833084,
+      "status": 0
+    }
+  },
   "_meta": {
     "mode": 1,
     "settings.showCombinations": true,
     "settings.accentColor": 270
   }
+
 }
