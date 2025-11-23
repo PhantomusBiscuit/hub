@@ -320,7 +320,8 @@ desc {
   display: flex; gap: 8px; flex: 1;
 }
 .action * { flex: 1; }
-.description span * { padding: 0 16px !important; }
+.description span * { padding: 2px; margin: 0; }
+.description span ul { display: flex; flex-direction: column; }
 .description span > * {
   width: 100%;
 }
@@ -376,5 +377,6 @@ code {
   flex: 0 0 40px;
 
 }
+
 
 
