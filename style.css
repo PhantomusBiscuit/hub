@@ -321,12 +321,12 @@ desc {
 }
 .action * { flex: 1; }
 .description span * { padding: 2px; margin: 0; }
-.description span ul { display: flex; flex-direction: column; }
 .description span > * {
   width: 100%;
 }
 ul {
-  display: block !important; width: calc(100% - 2em) !important; transform: translateX(1em);
+  display: flex; width: calc(100% - 2em) !important; transform: translateX(1em);
+  flex-direction: column;
 }
 li::marker {
   display: list-item;
@@ -377,6 +377,7 @@ code {
   flex: 0 0 40px;
 
 }
+
 
 
 
