@@ -323,10 +323,6 @@ desc {
 .description span > * {
   width: 100%;
 }
-.description span *:not(li) {
-  display: inline;
-  margin: 0; padding: 0; margin-block: 0;
-}
 ul {
   display: block !important; width: calc(100% - 2em) !important; transform: translateX(1em);
 }
@@ -377,4 +373,5 @@ code {
 }
 .search-results > * button.button {
   flex: 0 0 40px;
+
 }
