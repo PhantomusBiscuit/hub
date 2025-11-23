@@ -321,6 +321,7 @@ desc {
 }
 .action * { flex: 1; }
 .description span * { padding: 2px; margin: 0; }
+th, td { border: 1px solid var(--bg-dark); border-radius: 8px; }
 .description span > * {
   width: 100%;
 }
@@ -377,6 +378,7 @@ code {
   flex: 0 0 40px;
 
 }
+
 
 
 
